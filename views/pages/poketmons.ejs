@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <style>
+    body {
+      background-color: rgba(250, 235, 215, 0.338);
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .ul_list {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 30px;
+      margin: 0 auto;
+      margin-bottom: 30px;
+      width: 500px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>포켓몬 도감</h1>
+  <!-- <%= poketmons %> -->
+  <!-- 반복문을 활용해 모두 출력하기 -->
+
+  <% for(i=0; i< poketmons.length; i++){ %>
+  <ul class="ul_list">
+    <li><img src="<%= poketmons[i].imgUrl %>" alt="img<%=[i] %>" /></li>
+    <li>name : <%= poketmons[i].name %> </li>
+    <li>type : <%= poketmons[i].type %> </li>
+    <li>desc : <%= poketmons[i].desc %></li>
+  </ul>
+  <% } %>
+
+
+
+  <!-- <%= poketmons[0].name %> <br>
+  <%= poketmons[0].imgUrl %> <br>
+  <%= poketmons[0].type %> <br>
+  <%= poketmons[0].desc %> <br><br> -->
+
+</body>
+
+</html>
